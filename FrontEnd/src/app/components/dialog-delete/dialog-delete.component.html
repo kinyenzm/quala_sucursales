@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Eliminar sucursal</h1>
+<div mat-dialog-content>
+    ¿Desea eliminar la sucursal "{{sucursal.descripcion}}"?
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close color="warn">No, volver</button>
+    <button mat-button color="primary" (click)="confirmar_Eliminar()" cdkFocusInitial>Si, eliminar</button>
+</div>

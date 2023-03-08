@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>{{accion}} sucursal</h1>
+<div mat-dialog-content>
+    <form [formGroup]="formSucursal">
+        <mat-grid-list cols="2" rowHeight="90px">
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Código</mat-label>
+                    <input matInput formControlName="codigo" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Descripción</mat-label>
+                    <input matInput formControlName="descripcion" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Dirección</mat-label>
+                    <input matInput formControlName="direccion" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Identificación</mat-label>
+                    <input matInput formControlName="identificacion" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Moneda</mat-label>
+                    <mat-select formControlName="moneda">
+                        <mat-option *ngFor="let i of listaMonedas" [value]="i.id" >{{i.codigo}}
+                            ({{i.descripcion}})</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Fecha de creación</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="fechaCreacion">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close color="warn">Cerrar</button>
+    <button mat-button color="primary" (click)="addEditSucursal()" [disabled]="formSucursal.invalid">{{boton}}</button>
+</div>
