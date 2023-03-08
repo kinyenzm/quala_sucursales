@@ -5,11 +5,11 @@ Este proyecto es una aplicación CRUD (Crear, Leer, Actualizar y Borrar) para el
 #### Tecnologías usadas
 
 - .NET 6
-- EntityFrameworkCore
+- Entity Framework Core
 - AutoMapper
 - Angular 15
 - Angular Material
-- SQL Server [Azure]
+- SQL Server - Azure
 
 ### Instalación
 
