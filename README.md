@@ -5,7 +5,7 @@ Este proyecto es una aplicación CRUD (Crear, Leer, Actualizar y Borrar) para el
 #### Tecnologías usadas
 
 - .NET 6
-- EntityFramework
+- EntityFrameworkCore
 - AutoMapper
 - Angular 15
 - Angular Material
